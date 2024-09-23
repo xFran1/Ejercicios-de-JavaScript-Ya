@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 1
+
+let num_1 = 0;
+let num_2 = 0;
+
+num_1=parseFloat( prompt("Introduzca el primer número"))
+num_2=parseFloat( prompt("Introduzca el segundo número"))
+
+if(num_1>num_2){
+document.write("La suma es ",num_1+num_2)
+document.write("La diferencia es ",num_1-num_2)
+}else{
+    document.write("La multiplicación es ",num_1*num_2)
+    document.write("La división es ",num_1/num_2)
+}
+
+// 2
+let mark_introduced;
+
+mark_introduced=parseFloat( prompt("Introduzca la cantidad de notas"))
+
+let average = 0;
+
+let mark
+
+for(let i=0;i<mark_introduced;i++){
+
+    mark = parseFloat(prompt("Introduce la nota nº",i));
+    average+=mark
+
+}
+average/=mark_introduced
+
+
+if(average>=4){
+document.write("Regular")
+}else{
+    document.write("Reprobado")
+}
+
+// 3
+
+let positive_number
+
+positive_number = parseInt(prompt("Introducir un número de uno o dos dígitos"))
+
+if(positive_number<10){
+document.write("El número tiene un dígito")
+}else{
+    document.write("El número tiene mas de un dígito")
+}
+
+
+</script>
+</html>

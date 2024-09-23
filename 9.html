@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 1
+    let day = parseInt(prompt("Introduzca el dia"))
+    let month = parseInt(prompt("Introduzca el mes"))
+    let year = parseInt(prompt("Introduzca el año"))
+
+    if(month===12){
+        document.write("Este mes corresponde a navidad")
+    }
+    // 2
+
+    let num_1 = parseInt(prompt("Introduce un número"))
+    let num_2 = parseInt(prompt("Introduce un número"))
+    let num_3 = parseInt(prompt("Introduce un número"))
+
+    if(num_1===num_2===num_3){
+        document.write((num_1+num_2)*num_3);
+    }
+
+    // 3
+
+    let n1 = parseInt(prompt("Introduce un número"))
+    let n2 = parseInt(prompt("Introduce un número"))
+    let n3 = parseInt(prompt("Introduce un número"))
+
+    if(n1 < 10 && n2 < 10 && n3 < 10){
+        document.write("Todos los números son menores a diez")
+    }
+
+
+    // 4
+
+    let coord_x = parseFloat(prompt("Coordenada x:"))
+    let coord_y = parseFloat(prompt("Coordenada y:"))
+
+    if(coord_x>0&&coord_y>0){
+        document.write("Pertenece al primer cuadrante")
+    }else if(coord_x<0&&coord_y>0){
+        document.write("Pertenece al segundo cuadrante")
+    }else if(coord_x<0&&coord_y<0){
+        document.write("Pertenece al tercer cuadrante")
+    }else if(coord_x>0&& coord_y<0){
+        document.write("Pertenece al cuarto cuadrante")
+    }
+
+    // 5
+
+    let salary = parseFloat(prompt("Introduzca su sueldo"))
+    let antiquity = parseFloat(prompt("Introduzca los años trabajados en la empresa"))
+
+    if(salary<500&&antiquity>=10){
+        salary=salary+salary*0.20
+        document.write(salary)
+    }else if (salary<500&&antiquity<10){
+        salary=salary+salary*0.05
+        document.write(salary)
+    }else if(salary>=500){
+        document.write(salary)
+    }
+
+
+
+</script>
+
+</html>

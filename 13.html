@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 1
+    let n_mayor_7 = 0;
+    let n_menor_7 = 0;
+    let num = 0
+    for(let i = 0;i<10;i++){
+       num= parseInt(prompt("Introduzca un número"))
+       if(num>=7){
+        n_mayor_7++;
+       }else{
+        n_menor_7++;
+       }
+    }
+
+    // 2
+    let height = 0;
+    for(let i = 0 ;i<5;i++){
+        let num1 = parseInt(prompt("Introduzca la altura"))
+    }
+    document.write("La altura promedio es ",(height/5))
+
+    // 3
+    let total_salary = 0;
+    let salary_between = 0;
+    for(let i = 0 ;i<5;i++){
+        let individual_salary = parseInt(prompt("Introduzca su salario"))
+        total_salary+=individual_salary
+        if(individual_salary>100&&300>individual_salary){
+            salary_between++;
+        }
+    }
+
+    document.write("La empresa se gasta ",total_salary," y ",salary_between," tienen de salario entre 100 y 300")
+
+    // 4
+
+
+
+    for(let i = 1 ;i<= 20;i++){
+        document.write(i*5,"<br>")
+    }
+
+    // 5
+
+    let value1 = 10;
+    while(value1<=1500){
+        document.write(value1+"<br>")
+        value1+=10
+    }
+
+    // 6
+
+    let list1 = 0;
+    let list2 = 0;
+    let number_introduced = 0;
+    for(let i = 0 ;i<3;i++){
+        number_introduced= parseInt(prompt("Introduzca un número para la lista primera"))
+        list1+=number_introduced
+    }
+
+    for(let i = 0 ;i<3;i++){
+        number_introduced=parseInt(prompt("Introduzca un número para la segunda lista"))
+        list2+=number_introduced
+    }
+
+    if(list1>list2){
+        document.write(
+            "La lista 1 es mayor"
+        )
+    }else if(list2>list1){
+        document.write("La lista 2 es mayor")
+    }else{
+        document.write("Las dos listas son iguales")
+    }
+
+    // 7
+    let n_even = 0 //par
+    let n_odd = 0 //impar
+    let div_3 = 0;
+    let no_div_3 = 0;
+
+    for(let i = 0 ;i<5;i++){
+        let n = parseInt(prompt());
+        if(n%2==0){
+            n_even++;
+        }else{
+            n_odd++;
+        }
+        if(n%3===0){
+            div_3++;
+        }else{
+            no_div_3++;
+        }
+    }
+
+    document.write("Hay : ",n_even+" pares")
+    document.write("Hay : ",n_odd+" impares")
+    document.write("Hay : ",div_3+" divisibles entre 3")
+    document.write("Hay : ",no_div_3+"que no son divisibles entre 3")
+
+
+</script>
+</html>

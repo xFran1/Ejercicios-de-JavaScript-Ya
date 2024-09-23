@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// 1
+
+    let mark_introduced;
+
+    mark_introduced=parseInt( prompt("Introduzca la cantidad de notas"))
+
+    let average
+
+    let mark
+
+    for(let i=0;i<mark_introduced;i++){
+
+        mark = parseInt(prompt("Introduce la nota nº",i));
+        average+=mark
+
+    }
+    average/=mark_introduced
+    document.write("La nota media ",average)
+    if(average>=7){
+        document.write("Promocionado")
+    }else{
+        document.write("No ha promocionado")
+    }
+    document.write("<br>")
+// 2
+
+ let id1
+ let id2
+
+ id1 = prompt("Introduzca la primera clave")
+ id2 = prompt("Introduzca la segunda clave")
+
+    if(id1==id2){
+        document.write("Las dos claves son iguales")
+    }else{
+        document.write("Las dos claves no son iguales")
+    
+    }
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1
+    let min_num = Number.MIN_VALUE
+
+    for(let i = 0 ;i<3;i++){
+        let num = parseInt(prompt("Escribe un número"))
+        if(min_num<num){
+            min_num=num
+        }
+    }
+    document.write("El mayor numero es ",min_num)
+    
+    // 2
+
+    let value = parseFloat(prompt("Introduzca un valor entero"))
+
+    if(value<0){
+        document.write("El número es negativo")
+    }else if(value===0){
+        document.write("El número es cero")
+    }else if(value>0){
+        document.write("El número es positivo")
+    }
+
+    // 3
+
+    let positive_number
+
+positive_number = parseInt(prompt("Introducir un número de uno o tres dígitos"))
+
+if(positive_number<10){
+document.write("El número tiene un dígito")
+}else if(positive_number<100){
+    document.write("El número tiene dos dígitos")
+}else{
+    document.write("El número tiene tres dígitos")
+}
+
+
+    // 4
+
+    let name = prompt("Nombre del postulante")
+    let questions = parseInt( prompt("Número de preguntas"))
+    let correct_questions =  parseInt( prompt("Preguntas acertadas"))
+
+    let correct_percentage = (100*correct_questions)/questions;
+
+    if(correct_percentage>=90){
+        document.write("Nivel superior")
+    }else if (correct_percentage>=75&&correct_percentage<90){
+        document.write("Nivel medio")
+    }else if (correct_percentage>=50&&correct_percentage<75){
+        document.write("Nivel regular")
+    }else{
+        document.write("Fuera de nivel")
+    }
+
+</script>
+</html>

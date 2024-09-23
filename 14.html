@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 1
+    let value = 0;
+
+    do{
+        let a = parseInt(prompt("Escribe un número"))
+        value+=a
+    }while(value<9999)
+
+    // 2 
+    let salir = true;
+    let saldo_acreedores = 0;
+    do{
+        let num_cuenta = prompt("Introduzca su numero de cuenta")
+        let nombre = prompt("Introduzca su nombre")
+        let saldo = parseInt( prompt("Introduzca su saldo"))
+        document.write(num_cuenta,"<br>")
+        document.write(nombre,"<br>")
+        document.write(saldo,"<br>")
+        if(saldo>0){
+            document.write("Acreedor","<br>")
+            saldo_acreedores+=saldo;
+            }else if(saldo<0){
+            document.write("Deudor","<br>")
+        }else{
+            document.write("Nulo","<br>")
+        }
+        document.write("<br>")
+        let r = prompt("Desea continuar 1.Si 2.No")
+        if(r==="1"){
+
+        }else{
+            salir=false;
+        }
+    }while(salir)
+    document.write("El saldo de los acreedores es ",saldo_acreedores)
+
+    // 3
+
+    let entre_16_65 = 0;
+    let cantidad_mujeres = 0;
+    let cantidad_hombres = 0;
+    let total_censado = 0;
+
+    let salir2 = false;
+    do{
+
+        let dni = prompt("Introduzca su dni")
+        let h_o_m = prompt("Sexo 1.Hombre 2.Mujer")
+        if(h_o_m==1){
+            cantidad_hombres++;
+        }else{
+            cantidad_mujeres++;
+        }
+
+        let edad = parseInt(prompt("Edad"))
+
+        if(edad>=18&&edad<=65){
+            entre_16_65++;
+        }
+        total_censado++;
+        let r1 = prompt("Desea continuar 1.Si 2.No")
+        if(r1==="1"){
+
+        }else{
+            salir2=true;
+        }
+    }while(!salir2);
+
+    document.write("Total censado: ",total_censado,"<br>Cantidad hombres:",cantidad_hombres,"<br>Cantidad mujeres:",cantidad_mujeres,"<br>Personas entre 18 y 65:",entre_16_65)
+
+
+</script>
+</html>l
