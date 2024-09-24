@@ -25,6 +25,7 @@
     }
 
     // 2
+
     let suma = 0 
     for(let i = 0;i<10;i++){
             valor = parseInt(prompt("Introduzca un número"))
@@ -44,14 +45,140 @@
 
     // 4
 
-    let num = parseInt(prompt("Introduce un número del 1 al 10"))
+    let num = parseInt(prompt("Introduce un número del 1 al 10"));
 
     for(let i = 1 ;i<=10;i++){
-        document.write(num*i,"<br>")
+        document.write(num*i,"<br>");
     }
 
     // 5
+    let t_equi = 0;
+    let t_isos = 0;
+    let t_escal = 0;
 
+    let lado1=0
+    let lado2=0
+    let lado3=0
+    for(let i = 0;i<3;i++){
+        
+   
+
+     lado1 = parseInt(prompt("Introduce el lado del triángulo "));
+     lado2 = parseInt(prompt("Introduce el lado del triángulo "));
+     lado3 = parseInt(prompt("Introduce el lado del triángulo "));
+       
+        if(lado1==lado2&&lado1==lado3&&lado2==lado1&&lado2==lado3){
+            t_equi++;
+            document.write("Este triangulo es equilatero")
+        }else if (lado1===lado2||lado1===lado3||lado2===lado1||lado2===lado3){
+            t_isos++;
+            document.write("Este triangulo es isósceles")
+        }else{
+            t_escal++;
+            document.write("Este triangulo es escaleno")
+        }
+        document.write("<br>")
+
+        document.write("Lado 1: ",lado1)
+        document.write("Lado 2: ",lado2)
+        document.write("Lado 3: ",lado3)
+        document.write("<br>")
+
+    }
+
+    document.write("<br>")
+    document.write("Triángulos equilateros: ",t_equi)
+    document.write("Triángulos isosceles: ",t_isos)
+    document.write("Triángulos escalenos: ",t_escal)
+    document.write("<br>")
+
+    let menorCantidad = Number.MAX_VALUE;
+    let menorNombre = "";
+
+    if(t_equi<menorCantidad){
+        menorCantidad=t_equi;
+        menorNombre="Triángulo equilátero"
+    }
+
+    if(t_isos<menorCantidad){
+        menorCantidad=t_isos;
+        menorNombre="Triángulo isósceles"
+    }
+
+    if(t_escal<menorCantidad){
+        menorCantidad=t_escal;
+        menorNombre="Triángulo escaleno"
+    }
+
+    document.write("El que menor cantidad es ",menorNombre," y son ",menorCantidad)
+
+    // 6 
+
+    let cantidad = parseInt(prompt("Cuantos puntos quiere procesar"))
+    
+    let c1 = 0
+    let c2 = 0
+    let c3 = 0
+    let c4 = 0
+
+    for(let i =  0;i<cantidad;i++){
+        let coord_x = parseInt(prompt("Introduce el punto x:"))
+        let coord_y = parseInt(prompt("Introduce el punto y:"))
+
+        if(coord_x>0&&coord_y>0){
+            c1++
+        }else if(coord_x<0&&coord_y>0){
+        c2++;
+    }else if(coord_x<0&&coord_y<0){
+        c3++;
+    }else if(coord_x>0&& coord_y<0){
+        c4++;
+    }
+    }
+
+    document.write("Primer cuadrante: ",c1)
+    document.write("<br>")
+    document.write("Segundo cuadrante: ",c2)
+    document.write("<br>")
+    document.write("Tercer cuadrante: ",c3)
+    document.write("<br>")
+    document.write("Cuarto cuadrante: ",c4)
+
+    // 7
+
+    let num_neg = 0 ;
+    let num_pos = 0 ;
+    let mul_15 = 0;
+    let total = 0;
+
+    for(let i = 0;i<10;i++){
+        let numero = parseInt(prompt("Escribe un número"))
+    
+        if(numero<0){
+
+            num_neg++;
+        }else{
+            num_pos++;
+        }
+        if(numero%15==0){
+            mul_15++;
+        }
+        total+=numero;
+    
+    }
+
+    document.write("Numeros negativos: "+num_neg)
+    document.write("<br>")
+
+    document.write("Numeros positivos: "+num_pos)    
+    document.write("<br>")
+
+    document.write("Numeros múltiplos de 15: "+mul_15)    
+    document.write("<br>")
+
+    document.write("Total números: "+total)
+
+    // 8
     
 
 </script>
