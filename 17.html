@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    mostrar_menor(4,5,8);
+
+    menor_a_mayor(5,4,8);
+
+
+   function mostrar_menor(a,b,c){
+
+    let menor = Number.MAX_VALUE;
+
+    if(a<menor){
+        menor=a
+    }
+
+    if(b<menor){
+        menor=b
+    }
+
+    if(c<menor){
+        menor=c
+    }
+    document.write(menor)
+   }
+
+   function menor_a_mayor(a,b,c){
+
+    if (a <= b && a <= c) {
+        menor = a;
+        if (b <= c) {
+            medio = b;
+            mayor = c;
+        } else {
+            medio = c;
+            mayor = b;
+        }
+    } else if (b <= a && b <= c) {
+        menor = b;
+        if (a <= c) {
+            medio = a;
+            mayor = c;
+        } else {
+            medio = c;
+            mayor = a;
+        }
+    } else {
+        menor = c;
+        if (a <= b) {
+            medio = a;
+            mayor = b;
+        } else {
+            medio = b;
+            mayor = a;
+        }
+    }
+
+    // Mostrar los números ordenados
+    document.write(menor,"<br>",medio,"<br>",mayor)
+
+
+   }
+
+
+</script>
+</html>

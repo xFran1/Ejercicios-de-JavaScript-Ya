@@ -180,6 +180,53 @@
 
     // 8
     
+    let edad = 0;
+
+    let promedio_manana = 0;
+    let promedio_tarde = 0;
+    let promedio_noche = 0;
+
+    for(let i = 0;i<5;i++){
+         edad = prompt("Edad del turno mañana")
+         promedio_manana+=edad;
+    }
+    
+    for(let i = 0;i<6;i++){
+        edad = prompt("Edad del turno tarde")
+        promedio_tarde+=edad;
+    }
+    
+    for(let i = 0;i<11;i++){
+        edad = prompt("Edad del turno noche")
+        promedio_noche+=edad;
+    }
+
+    promedio_manana/=5;
+    promedio_tarde/=6;
+    promedio_noche/=11;
+
+    document.write("Promedio mañana ",promedio_manana);
+    document.write("Promedio tarde ",promedio_tarde);
+    document.write("Promedio noche ",promedio_noche);
+
+    let promedio_mayor = 0;
+    let text_mayor = "";
+
+    if(promedio_manana>promedio_mayor){
+        promedio_mayor=promedio_manana;
+        text_mayor="El mayor promedio es el de mañana con ",promedio_mayor
+    }
+
+    if(promedio_tarde>promedio_mayor){
+        promedio_mayor=promedio_tarde;
+        text_mayor="El mayor promedio es el de tarde con ",promedio_mayor
+    }
+
+    if(promedio_noche>promedio_mayor){
+        promedio_mayor=promedio_noche;
+        text_mayor="El mayor promedio es el de noche con ",promedio_mayor
+    }
+
 
 </script>
 </html>

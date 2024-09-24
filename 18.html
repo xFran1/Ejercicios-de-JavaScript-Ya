@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1
+    mayor_numero(3,5,8);
+    function mayor_numero(a,b,c){
+        if(a>=b&&a>=c){
+            document.write(a)
+        }else if(b>=a&&b>=c){
+            document.write(b)
+        }else{
+            document.write(c)
+        }
+    }
+
+    // 2
+    perimetro_cuadrado(5);
+    
+    function perimetro_cuadrado(a){
+        document.write(a*4);
+    }
+
+    volumen_cilindro(5,12);
+
+    function volumen_cilindro(radio,altura){
+        let calculo=Math.PI*radio*radio*altura;
+        document.write(calculo);
+    }
+
+    // 3
+
+    cantidad_digitos(555)
+
+    function cantidad_digitos(a){
+        if(a<10){
+            document.write('1 digito')
+        }else if(a<100){
+            document.write('2 digito')
+        }else if(a<1000){
+            document.write('3 digito')
+        }else if(a<10000){
+            document.write('4 digito')
+        }else if(a<100000){
+            document.write('5 digito')
+        }else if(a<1000000){
+            document.write('6 digito')
+        }else if(a<10000000){
+            document.write('7 digito')
+        }
+    }
+
+
+
+    // 4
+    promedio(3,5,8);
+
+    function promedio(a,b,c){
+        let med = (a+b+c)/3;
+        document.write(med)
+    }
+
+    // 5
+
+    suma_5_valores();
+
+    function suma_5_valores(){
+        let total = 0;
+        
+        for(let i = 0;i<5;i++){
+            let valor=parseInt(prompt('Introduce un número'))
+            total+=valor;
+        }
+        document.write(total)
+    }
+</script>
+</html>l
